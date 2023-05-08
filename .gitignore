@@ -8,7 +8,7 @@
 .DS_Store
 .parcel-cache
 tailwind.config.js
-index.html
+# index.html
 yarn.lock
 yarn-error.log
 types/generated/*.d.ts
@@ -22,4 +22,4 @@ isolate*.log
 /src/corePluginList.js
 
 # Generated files during tests
-/tests/evaluate-tailwind-functions.test.html
+# /tests/evaluate-tailwind-functions.test.html
