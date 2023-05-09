@@ -1,0 +1,28 @@
+@font-face {
+    font-family: Inter;
+    src: url(../fonts/Inter.ttf);
+}
+
+* {
+    font-family: Inter, sans-serif;
+}
+
+.splide__pagination {
+    bottom: -20px !important;
+}
+
+.splide__pagination__page {
+    height: 10px !important;
+    width: 10px !important;
+    opacity: 0.4 !important;
+    margin: 5px !important;
+    background: #aaaaaa !important;
+}
+
+.splide__pagination__page.is-active {
+    background: #353535 !important;
+}
+
+.splide__arrow {
+    background: #ccc !important;
+}
