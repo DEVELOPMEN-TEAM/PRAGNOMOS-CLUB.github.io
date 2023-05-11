@@ -1,9 +1,16 @@
 ---
+import Faqs from "../components/Faqs.astro";
+import News from "../components/News.astro";
 import Showcase from "../components/Showcase.astro";
+import Teams from "../components/Teams.astro";
+import WhatWeDo from "../components/WhatWeDo.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Welcome to PRAGNOMOS.">
 	<Showcase />
-	<div style="height: 1000px;"></div>
+	<WhatWeDo />
+	<Teams />
+	<News />
+	<Faqs />
 </Layout>

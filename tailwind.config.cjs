@@ -8,9 +8,9 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				inter: ["Inter", "sans-serif"],
-				lexend: ["Lexend", "sans-serif"],
+				ofelia: ["Ofelia", "sans-serif"],
 			},
 		},
 	},
-	plugins: [require("flowbite/plugin")],
+	plugins: [require("flowbite/plugin"), require("@tailwindcss/typography")],
 };
