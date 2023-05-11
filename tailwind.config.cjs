@@ -9,6 +9,7 @@ module.exports = {
 			fontFamily: {
 				inter: ["Inter", "sans-serif"],
 				ofelia: ["Ofelia", "sans-serif"],
+				montserrat: ["Montserrat", "sans-serif"],
 			},
 		},
 	},
