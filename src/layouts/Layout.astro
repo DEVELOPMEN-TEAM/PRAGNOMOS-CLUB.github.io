@@ -23,8 +23,8 @@ const { title } = Astro.props;
 		/>
 
 		<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600;700;800;900&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 		<link
 			href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
@@ -36,11 +36,24 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body class="font-inter">
+		<canvas class="background absolute top-0 left-0 z-[-100] h-screen w-screen"></canvas>
 		<Navbar />
 		<slot />
 		<Footer />
 		<script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"
 		></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+		<script>
+			window.onload = function() {
+				Particles.init({
+					selector: '.background',
+					maxParticles: 100,
+					minDistance: 150,
+					connectParticles: true,
+					sizeVariations: 3,
+				});
+			};
+		</script>
 	</body>
 </html>
