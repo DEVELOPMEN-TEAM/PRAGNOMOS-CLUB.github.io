@@ -4,80 +4,85 @@ const news = await Astro.glob("../content/news/*.md");
 ---
 
 <div class="max-w-screen-xl mx-auto px-4 py-10">
-	<h3 class="font-montserrat text-center font-bold text-black text-4xl md:text-5xl mb-10">News</h3>
+  <h3
+    class="font-montserrat text-center font-bold text-black text-4xl md:text-5xl mb-10"
+  >
+    Latest news
+  </h3>
 
-	<div>
-		<div class="splide">
-			<div class="splide__track py-8">
-				<ul class="splide__list">
-					{
-						news.map(({ frontmatter }) => (
-							<li class="splide__slide">
-								<div class="max-w-sm bg-white border border-gray-200 rounded-lg h-1/4">
-									<a href={route(`/news/${frontmatter.slug}`)}>
-										<img
-											class="rounded-t-lg aspect-video object-cover w-full"
-											src={frontmatter.image}
-											alt={frontmatter.title}
-										/>
-									</a>
-									<div class="p-5">
-										<a href={route(`/news/${frontmatter.slug}`)}>
-											<h5 class="mb-2 text-2xl font-bold tracking-tight text-black">
-												{frontmatter.title}
-											</h5>
-										</a>
-										<p class="text-xs mb-2">
-											posted on {frontmatter.date}
-										</p>
-										<p class="mb-3 font-normal text-gray-700 line-clamp-4">
-											{frontmatter.description}
-										</p>
-										<a
-											href={route(`/news/${frontmatter.slug}`)}
-											class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-black rounded-lg hover:rounded-none focus:ring-4 focus:outline-none"
-										>
-											Read more
-											<svg
-												aria-hidden="true"
-												class="w-4 h-4 ml-2 -mr-1"
-												fill="currentColor"
-												viewBox="0 0 20 20"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path
-													fill-rule="evenodd"
-													d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-													clip-rule="evenodd"
-												/>
-											</svg>
-										</a>
-									</div>
-								</div>
-							</li>
-						))
-					}
-				</ul>
-			</div>
-		</div>
-	</div>
+  <div>
+    <div class="splide">
+      <div class="splide__track py-8">
+        <ul class="splide__list">
+          {
+            news.map(({ frontmatter }) => (
+              <li class="splide__slide">
+                <div class="max-w-sm bg-white border border-gray-200 rounded-lg h-1/4">
+                  <a href={route(`/news/${frontmatter.slug}`)}>
+                    <img
+                      class="rounded-lg aspect-video object-cover w-full"
+                      src={frontmatter.image}
+                      alt={frontmatter.title}
+                    />
+                  </a>
+                  <div class="p-5">
+                    <div class="flex justify-between items-center">
+                      <a href={route(`/news/${frontmatter.slug}`)}>
+                        <h5 class="mb-2 text-2xl font-bold font-montserrat tracking-tight text-black">
+                          {frontmatter.title}
+                        </h5>
+                      </a>
+                      <p class="text-xs mb-2 text-gray-700">{frontmatter.date}</p>
+                    </div>
+
+                    <p class="mb-3 font-normal text-gray-700 truncate ">
+                      {frontmatter.description}
+                    </p>
+                    <a
+                      href={route(`/news/${frontmatter.slug}`)}
+                      class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-black rounded-lg  focus:ring-4 focus:outline-none"
+                    >
+                      Read more
+                      <svg
+                        aria-hidden="true"
+                        class="w-4 h-4 ml-2 -mr-1"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script>
-	document.addEventListener("DOMContentLoaded", function () {
-		new Splide(".splide", {
-			type: "slide",
-			omitEnd: true,
-			rewind: true,
-			autoWidth: true,
-			perMove: 1,
-			autoplay: "play",
-			interval: 3000,
-			speed: 1000,
-			pauseOnHover: true,
-			pauseonFocus: false,
-			
-			gap: "40px",
-		}).mount();
-	});
+  document.addEventListener("DOMContentLoaded", function () {
+    new Splide(".splide", {
+      type: "slide",
+      omitEnd: true,
+      rewind: true,
+      autoWidth: true,
+      perMove: 1,
+      autoplay: "play",
+      interval: 3000,
+      speed: 1000,
+      pauseOnHover: true,
+      pauseonFocus: false,
+
+      gap: "40px",
+    }).mount();
+  });
 </script>
