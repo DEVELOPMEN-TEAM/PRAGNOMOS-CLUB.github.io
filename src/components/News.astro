@@ -3,7 +3,7 @@ import { route } from "../lib/utils";
 const news = await Astro.glob("../content/news/*.md");
 ---
 
-<div class="max-w-screen-xl mx-auto px-4 py-10">
+<div class="max-w-screen-xl mx-auto px-4 py-10 mt-16">
   <h3
     class="font-montserrat text-center font-bold text-black text-4xl md:text-5xl mb-10"
   >
@@ -35,7 +35,7 @@ const news = await Astro.glob("../content/news/*.md");
                       <p class="text-xs mb-2 text-gray-700">{frontmatter.date}</p>
                     </div>
 
-                    <p class="mb-3 font-normal text-gray-700 truncate ">
+                    <p class="mb-3 font-normal text-gray-700 line-clamp-4">
                       {frontmatter.description}
                     </p>
                     <a
