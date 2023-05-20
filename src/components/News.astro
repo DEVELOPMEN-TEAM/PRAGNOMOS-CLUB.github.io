@@ -16,8 +16,8 @@ const news = await Astro.glob("../content/news/*.md");
         <ul class="splide__list">
           {
             news.map(({ frontmatter }) => (
-              <li class="splide__slide">
-                <div class="max-w-sm bg-white border border-gray-200 rounded-lg h-1/4">
+              <li class="splide__slide border border-gray-200 rounded-lg">
+                <div class="max-w-sm bg-white rounded-lg h-1/4">
                   <a href={route(`/news/${frontmatter.slug}`)}>
                     <img
                       class="rounded-lg aspect-video object-cover w-full"
@@ -32,9 +32,8 @@ const news = await Astro.glob("../content/news/*.md");
                           {frontmatter.title}
                         </h5>
                       </a>
-                      <p class="text-xs mb-2 text-gray-700">{frontmatter.date}</p>
                     </div>
-
+                    <p class="text-xs mb-5 text-gray-700">{frontmatter.date}</p>
                     <p class="mb-3 font-normal text-gray-700 line-clamp-4">
                       {frontmatter.description}
                     </p>
