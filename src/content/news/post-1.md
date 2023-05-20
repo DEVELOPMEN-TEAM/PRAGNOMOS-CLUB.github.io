@@ -1,5 +1,5 @@
 ---
-title: Carrer Journeys Insights from Two Professionals
+title: Carrer Journeys Insights from Two Professionals.
 date: 27-05-2023
 image: /imgs/post-1.jpg
 slug: career-journeys-insights-from-two-professionals
