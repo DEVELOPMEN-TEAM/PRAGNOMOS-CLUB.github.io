@@ -1,6 +1,6 @@
 ---
 title: Carrer Journeys Insights from Two Professionals.
-date: 27-05-2023
+date: 10-05-2023
 image: /imgs/post-1.jpg
 slug: career-journeys-insights-from-two-professionals
 description: Unlock the Future of AI with Pragnomos ! Join us for an inspiring event featuring two accomplished individuals, Hamza ELOUIAAZZANI and Khadija Izaqafen, as they share their career journeys and invaluable insights.
