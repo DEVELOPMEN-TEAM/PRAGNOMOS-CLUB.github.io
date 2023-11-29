@@ -1,6 +1,6 @@
 ---
 title: Agora AI Bootcamp by PRAGNOMOS
-date: Every Friday from 01/02 to 15/12 at 15:00
+date: Every Friday from 01/12 to 15/12 at 15:00
 image: /imgs/post-2.png
 slug: agora-ai-bootcamp
 description: Agora Bootcamp an intensive program organized by PRAGNOMOS, that offers participants an immersive journey into the cutting-edge realms of Artificial Intelligence.
@@ -15,7 +15,7 @@ Agora will consist of 3 exciting sessions:
 
 PS. You will get a free shareable certificate by the end of the bootcamp.
 
-📅 When: Every Friday from 01/02 to 15/12 at 15:00  
+📅 When: Every Friday from 01/12 to 15/12 at 15:00  
 📍 Where: Amphithéâtre, Faculty of Sciences, Ibn Tofail University
 
 Register now for a chance to receive a free shareable certificate by the end of the Bootcamp. Don't miss out on this incredible learning experience! 🚀 
