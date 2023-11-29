@@ -17,3 +17,6 @@ PS. You will get a free shareable certificate by the end of the bootcamp.
 
 📅 When: Every Friday from 01/02 to 15/12 at 15:00  
 📍 Where: Amphithéâtre, Faculty of Sciences, Ibn Tofail University
+
+Register now for a chance to receive a free shareable certificate by the end of the Bootcamp. Don't miss out on this incredible learning experience! 🚀 
+[Link](https://docs.google.com/forms/d/e/1FAIpQLScvuyfA3GKB9EQp7e64zqSW1Xqz6uITqszQdDIVSHfTliJ1uQ/viewform?amp;usp=embed_facebook)
