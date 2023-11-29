@@ -1,5 +1,5 @@
 ---
-title: Agora AI Bootcamp.
+title: Agora, an AI Bootcamp organized by PRAGNOMOS.
 date: Every Friday from 01/02 to 15/12 at 15:00
 image: /imgs/post-2.png
 slug: agora-ai-bootcamp
