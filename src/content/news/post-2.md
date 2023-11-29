@@ -1,7 +1,7 @@
 ---
 title: Agora AI Bootcamp by PRAGNOMOS
 date: Every Friday from 01/12 to 15/12 at 15:00
-image: /imgs/post-2.png
+image: /imgs/Comp-1.gif
 slug: agora-ai-bootcamp
 description: Agora Bootcamp an intensive program organized by PRAGNOMOS, that offers participants an immersive journey into the cutting-edge realms of Artificial Intelligence.
 ---
