@@ -1,0 +1,78 @@
+---
+import Layout from "../../layouts/Layout.astro";
+export async function getStaticPaths() {
+	const archives = await Astro.glob("../../content/archives/*.md");
+
+	return archives.map((post) => ({
+		params: {
+			slug: post.frontmatter.slug,
+		},
+		props: {
+			post,
+		},
+	}));
+}
+
+const { Content, frontmatter } = Astro.props.post;
+const { title, date, slug, description, image } = frontmatter;
+---
+
+<Layout title={title}>
+	<div class="h-[30vh] md:h-[50vh] bg-gray-600 relative z-[1]">
+		<img src={image} class="absolute inset-0 w-full h-full object-cover z-[-2]" alt="" />
+		<div class="absolute inset-0 w-full h-full z-[-1] bg-black opacity-50"></div>
+		<div class="max-w-screen-xl mx-auto px-4 py-4 md:py-10 flex flex-col justify-end h-full">
+			<h3 class="font-josefin font-medium text-white text-3xl md:text-5xl mb-4">
+				{title}
+			</h3>
+			<p class="text-gray-200">{date}</p>
+		</div>
+	</div>
+	<div class="max-w-screen-xl mx-auto px-4 py-10">
+		<article class="prose mx-auto" id="styled-table">
+			<Content />
+		</article>
+	</div>
+</Layout>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Find the table inside the container
+        const table = document.querySelector('#styled-table table');
+        if (table) {
+            // Add base table styling
+            table.classList.add('table-auto', 'w-full', 'border-collapse', 'border', 'border-gray-300');
+
+            // Style the table header
+            const thead = table.querySelector('thead');
+            if (thead) {
+                thead.classList.add('bg-gray-100');
+                thead.querySelectorAll('th').forEach((th, index) => {
+                    th.classList.add('border', 'border-gray-300', 'px-4', 'py-2', 'text-left', 'font-medium');
+                    // Apply more width to the 6th column
+                    if (index === 5) {
+                        th.classList.add('w-48'); // Adjust the width as needed
+                    }
+                });
+            }
+
+            // Style the table body
+            const tbody = table.querySelector('tbody');
+            if (tbody) {
+                tbody.querySelectorAll('tr').forEach((tr, rowIndex) => {
+                    // Alternate row background color
+                    if (rowIndex % 2 === 0) {
+                        tr.classList.add('bg-gray-50');
+                    }
+                    // Add hover effect
+                    tr.classList.add('hover:bg-gray-100');
+
+                    // Style table cells
+                    tr.querySelectorAll('td').forEach((td, colIndex) => {
+                        td.classList.add('border', 'border-gray-300', 'p-2');
+                    });
+                });
+            }
+        }
+    });
+</script>
