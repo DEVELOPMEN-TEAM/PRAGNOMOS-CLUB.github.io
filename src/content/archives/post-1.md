@@ -1,5 +1,6 @@
 ---
 title: First Promotion Archives.
+date: 2022 - 2024
 image: /imgs/conferences600x200.jpg
 slug: first-promotion-archives
 description: Explore the projects and achievements of our first promotion, showcasing the foundation of our journey and the legacy of our earliest graduates.
